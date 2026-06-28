@@ -5,7 +5,7 @@ import requests
 def dns_resolve(host):
     try:
         print(socket.gethostbyname(host))
-    except:
+    except socket.gaierror:
         print("this domain is not exist")
         return 25
 
@@ -32,7 +32,7 @@ def http_insp(host):
 def inspector():
     while True:
         host = input("domain: ")
-        if host=="X":
+        if host=="X" || host=="x":
             break
         if dns_resolve(host)==25:
             continue
