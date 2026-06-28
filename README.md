@@ -40,10 +40,28 @@ python network_inspector.py
 
 - `network_inspector.py` — основной файл программы
 
-## Статус
+## Запуск через Docker
 
-Первый учебный мини-проект.
+Сборка образа:
 
-## Автор
+```bash
+docker build -t network_inspector .
+```
 
-03LK
+Запуск контейнера:
+
+```bash
+docker run -it network_inspector
+```
+
+Пример использования:
+
+```text
+domain: google.com
+```
+
+Для выхода из программы:
+
+```text
+X
+```
