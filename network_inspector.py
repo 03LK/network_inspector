@@ -5,12 +5,12 @@ import requests
 def dns_resolve(host):
     try:
         print(socket.gethostbyname(host))
-    except socket.gaierror:
+    except:
         print("this domain is not exist")
         return 25
 
 def ping_checker(host):
-    result = subprocess.run(["ping", host, "-n", "2"], encoding="cp866", capture_output=True, text=True)
+    result = subprocess.run(["ping", "-с", "2", host], encoding="cp866", capture_output=True, text=True)
     print(result.stdout)
 
 def port_scanner(host):
@@ -32,7 +32,7 @@ def http_insp(host):
 def inspector():
     while True:
         host = input("domain: ")
-        if host=="X" || host=="x":
+        if host=="X" or host=="x":
             break
         if dns_resolve(host)==25:
             continue
