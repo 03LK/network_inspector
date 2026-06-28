@@ -51,7 +51,7 @@ docker build -t network_inspector .
 Запуск контейнера:
 
 ```bash
-docker run -it network_inspector
+docker run -i network_inspector
 ```
 
 Пример использования:
